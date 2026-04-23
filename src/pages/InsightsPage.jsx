@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import insightImage from '../assets/insight.jpg'
 
@@ -74,7 +75,7 @@ function InsightsPage() {
                 <p className="insights-cta__eyebrow">Newsletter</p>
                 <h2 className="mb-3">Stay Updated</h2>
                 <p>Get practical insights, workshop updates, and growth ideas delivered to your inbox.</p>
-                <a className="btn btn-brand-primary" href="/contact">Join the Conversation</a>
+                <Link className="btn btn-brand-primary" to="/contact">Join the Conversation</Link>
               </div>
             </Reveal>
           </div>
