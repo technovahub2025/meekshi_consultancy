@@ -6,6 +6,15 @@
   background: linear-gradient(180deg, #edf7fd 0%, #eaf4fb 100%);
 }
 
+.about-page .page-title {
+  color: #123c61;
+}
+
+.about-page .page-hero::before,
+.about-page .page-hero::after {
+  display: none;
+}
+
 .about-page .about-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 620px);
@@ -217,6 +226,28 @@
 }
 
 @media (max-width: 767px) {
+  .about-page .page-hero {
+    background: linear-gradient(180deg, #0f3555 0%, #1d5a86 62%, #ebf6fc 62%);
+  }
+
+  .about-page .page-title {
+    color: #f4fbff !important;
+    text-shadow: 0 2px 8px rgba(6, 26, 44, 0.25);
+  }
+
+  .about-page .eyebrow {
+    box-shadow: 0 8px 16px rgba(248, 191, 45, 0.3);
+  }
+
+  .about-page .about-hero__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-page .about-hero {
+    gap: 1rem;
+  }
+
   .about-page .py-5 {
     padding-top: 2.2rem !important;
     padding-bottom: 2.2rem !important;
@@ -228,6 +259,8 @@
 
   .about-page .about-hero__image {
     border-radius: 16px;
+    border-color: #bcd9e9;
+    box-shadow: 0 14px 28px rgba(19, 60, 94, 0.22);
   }
 
   .about-page .about-intro__card {
