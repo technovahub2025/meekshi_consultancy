@@ -1,5 +1,6 @@
 import Reveal from '../components/Reveal'
 import aboutHeroImage from '../assets/about us.jpg'
+import './AboutPage.css'
 
 function VisionIcon() {
   return (
@@ -55,7 +56,7 @@ function MissionIcon() {
 
 function AboutPage() {
   return (
-    <main>
+    <main className="about-page">
       <section className="page-hero py-5">
         <div className="container">
           <div className="about-hero">
