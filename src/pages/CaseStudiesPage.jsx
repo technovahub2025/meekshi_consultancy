@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import caseStudyImage from '../assets/case study.png'
+import caseStudyCard1 from '../assets/case-study-1.jpg'
+import caseStudyCard2 from '../assets/case-study-2.jpg'
+import caseStudyCard3 from '../assets/case-study-3.jpg'
 
 function ProblemIcon() {
   return (
@@ -31,24 +34,21 @@ function ResultIcon() {
 const studies = [
   {
     title: 'Startup Hiring Structure',
-    image:
-      'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80',
+    image: caseStudyCard1,
     problem: 'Lack of HR structure and ad-hoc hiring decisions.',
     solution: 'Designed HR policies, interview scorecards, and hiring workflow.',
     result: 'Hiring efficiency improved by 40%.',
   },
   {
     title: 'Process and SOP Rollout',
-    image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+    image: caseStudyCard2,
     problem: 'Role confusion and inconsistent execution.',
     solution: 'Built SOPs and process ownership framework.',
     result: '30% faster project completion cycle.',
   },
   {
     title: 'Career Readiness Workshops',
-    image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    image: caseStudyCard3,
     problem: 'Students lacked interview readiness and confidence.',
     solution: 'Delivered structured coaching and mock interviews.',
     result: '100+ individuals guided.',

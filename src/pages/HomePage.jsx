@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import ConsultingIllustration from '../components/ConsultingIllustration'
+import client1Image from '../assets/client-1.jpg'
+import client2Image from '../assets/client-2.jpg'
+import client3Image from '../assets/client-3.jpg'
 
 const homeServices = [
   {
@@ -26,21 +29,21 @@ const clientStories = [
       'Working with Meekshi Consultancy felt effortless. They guided us through process setup and delivered outcomes beyond expectations.',
     name: 'Saurabh Dutta',
     role: 'CEO, Green Revolution Co.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: client1Image,
   },
   {
     quote:
       'Integrated support across hiring and operations boosted our team performance through a clear and practical workflow.',
     name: 'Arvind Chauhan',
     role: 'VP of Product, Zapway',
-    image: 'https://randomuser.me/api/portraits/men/45.jpg',
+    image: client2Image,
   },
   {
     quote:
       'From startup confusion to structured growth, their consulting transformed our execution and digital presence.',
     name: 'Lisa Wilson',
     role: 'VP, Sustainable Goods Co.',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    image: client3Image,
   },
 ]
 
