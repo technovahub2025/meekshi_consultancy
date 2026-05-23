@@ -59,7 +59,7 @@ function HomePage() {
               <p className="lead-copy mb-4">HR Consulting | Business Strategy | Women Empowerment Initiatives</p>
               <div className="d-flex flex-wrap gap-3">
                 <Link className="btn btn-brand-primary" to="/contact">Book a Free Consultation</Link>
-                <a className="btn btn-brand-outline" href="https://wa.me/919000000000" target="_blank" rel="noreferrer">WhatsApp Now</a>
+                <a className="btn btn-brand-outline" href="https://wa.me/918940135489" target="_blank" rel="noreferrer">WhatsApp Now</a>
               </div>
             </Reveal>
             <Reveal as="div" className="col-lg-5" delay={250}>
@@ -226,7 +226,7 @@ function HomePage() {
           </div>
           <div className="d-flex flex-wrap gap-3">
             <Link className="btn btn-brand-primary" to="/contact">Book a Call</Link>
-            <a className="btn btn-brand-outline-dark" href="https://wa.me/919000000000" target="_blank" rel="noreferrer">Contact via WhatsApp</a>
+            <a className="btn btn-brand-outline-dark" href="https://wa.me/918940135489" target="_blank" rel="noreferrer">Contact via WhatsApp</a>
           </div>
         </div>
       </section>

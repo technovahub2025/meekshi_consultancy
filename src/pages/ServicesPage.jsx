@@ -8,15 +8,31 @@ import screen3 from '../assets/screen3.png'
 const serviceGroups = [
   {
     title: 'HR Consulting',
-    items: ['Recruitment & Hiring Support', 'HR Policies & Compliance', 'Performance Management'],
+    price: '₹9,999',
+    items: [
+      'Recruitment & Hiring Support',
+      'HR Policies & Compliance',
+      'Performance Management',
+      'Team Building (Organization/Institution)',
+    ],
   },
   {
     title: 'Business Consulting',
-    items: ['Startup Setup', 'Process & SOP Development', 'Business Growth Planning'],
+    price: '₹29,999',
+    items: [
+      'Startup Setup',
+      'Process & SOP Development',
+      'Business Growth Planning',
+    ],
   },
   {
     title: 'Training Programs',
-    items: ['Training & Workshops', 'College Career Sessions', 'Corporate Training'],
+    price: '₹14,999',
+    items: [
+      'Training & Workshops',
+      'College Career Sessions',
+      'Corporate Training',
+    ],
   },
 ]
 
@@ -25,7 +41,7 @@ const serviceBlueprintRows = [
     label: 'A. HR Consulting',
     title: 'Architectural Strategy',
     description: 'We create the systems behind healthy teams - policies, hiring flow, and performance structure.',
-    items: ['Recruitment & Hiring Support', 'HR Policies & Compliance', 'Performance Management'],
+    items: ['Recruitment & Hiring Support', 'HR Policies & Compliance', 'Performance Management','Team Building (Organization/Institution)'],
     image: screen1,
     imageAlt: 'HR consulting screen overview',
     reverse: false,
@@ -58,12 +74,18 @@ function ServicesPage() {
           <div className="services-blueprint__hero">
             <div className="services-blueprint__intro">
               <p className="eyebrow mb-2">Services</p>
-              <h1 className="page-title">How we move businesses forward with practical consulting.</h1>
+              <h1 className="page-title">
+                How we move businesses forward with practical consulting.
+              </h1>
               <p className="services-blueprint__lead">
                 We blend HR structure, business clarity, and people-first strategy into simple, workable steps.
               </p>
             </div>
-            <img className="services-blueprint__hero-image" src={servicesHeroImage} alt="Consulting team illustration" />
+            <img
+              className="services-blueprint__hero-image"
+              src={servicesHeroImage}
+              alt="Consulting team illustration"
+            />
           </div>
         </div>
       </section>
@@ -81,28 +103,40 @@ function ServicesPage() {
                     <p className="services-blueprint__label">{row.label}</p>
                     <h2>{row.title}</h2>
                     <p>{row.description}</p>
+
                     <ul className="check-list">
                       {row.items.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
-                    <Link className="btn btn-brand-primary btn-sm mt-3" to="/contact">Book Now</Link>
+
+                    <Link className="btn btn-brand-primary btn-sm mt-3" to="/contact">
+                      Book Now
+                    </Link>
                   </div>
                 )}
 
-                <img className="services-blueprint__image" src={row.image} alt={row.imageAlt} />
+                <img
+                  className="services-blueprint__image"
+                  src={row.image}
+                  alt={row.imageAlt}
+                />
 
                 {row.reverse && (
                   <div className="services-blueprint__copy">
                     <p className="services-blueprint__label">{row.label}</p>
                     <h2>{row.title}</h2>
                     <p>{row.description}</p>
+
                     <ul className="check-list">
                       {row.items.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
-                    <Link className="btn btn-brand-primary btn-sm mt-3" to="/contact">Book Now</Link>
+
+                    <Link className="btn btn-brand-primary btn-sm mt-3" to="/contact">
+                      Book Now
+                    </Link>
                   </div>
                 )}
               </div>
@@ -115,17 +149,29 @@ function ServicesPage() {
         <div className="container">
           <div className="row g-4">
             {serviceGroups.map((group, index) => (
-              <Reveal as="div" className="col-md-6 col-lg-4" key={group.title} delay={100 + (index * 90)}>
+              <Reveal
+                as="div"
+                className="col-md-6 col-lg-4"
+                key={group.title}
+                delay={100 + index * 90}
+              >
                 <article className="service-box h-100 service-box--featured">
                   <p className="service-box__eyebrow">Core Service</p>
                   <h3>{group.title}</h3>
+
                   <ul>
                     {group.items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <p className="price-note">Starting from Rs. 20,000</p>
-                  <Link className="btn btn-brand-primary btn-sm" to="/contact">Book Now</Link>
+
+                  <p className="price-note">
+                    Starting from <strong>{group.price}</strong>
+                  </p>
+
+                  <Link className="btn btn-brand-primary btn-sm" to="/contact">
+                    Book Now
+                  </Link>
                 </article>
               </Reveal>
             ))}
@@ -139,11 +185,15 @@ function ServicesPage() {
             <h2>Women Empowerment & Pricing</h2>
             <p>Designed to stay flexible, practical, and accessible for different engagement needs.</p>
           </div>
+
           <div className="row g-4 align-items-stretch">
             <Reveal as="div" className="col-lg-6" delay={100}>
               <div className="panel panel-accent h-100">
                 <p className="panel-kicker">Women Empowerment Programs</p>
-                <h3 className="mb-3">Workshops that build confidence and capability.</h3>
+                <h3 className="mb-3">
+                  Workshops that build confidence and capability.
+                </h3>
+
                 <ul className="check-list">
                   <li>Leadership Development</li>
                   <li>Career Guidance Sessions</li>
@@ -151,10 +201,12 @@ function ServicesPage() {
                 </ul>
               </div>
             </Reveal>
+
             <Reveal as="div" className="col-lg-6" delay={200}>
               <div className="panel panel-accent h-100">
                 <p className="panel-kicker">Pricing Models</p>
                 <h3 className="mb-3">Simple models that fit your scope.</h3>
+
                 <ul className="check-list">
                   <li>Per project</li>
                   <li>Per day</li>
@@ -176,31 +228,48 @@ function ServicesPage() {
                 What Our <span>Clients</span> Say
               </h2>
             </div>
+
             <div className="reviews-head__arrows" aria-hidden="true">
               <button type="button" className="reviews-arrow">?</button>
               <button type="button" className="reviews-arrow">?</button>
             </div>
           </div>
+
           <div className="testimonial-layout">
             <Reveal as="div" className="testimonial-feature h-100" delay={100}>
               <div className="testimonial-feature__top">
                 <span className="testimonial-feature__badge">Client Love</span>
                 <span className="testimonial-feature__spark"></span>
               </div>
+
               <p>Professional, practical, and truly impactful.</p>
               <div className="testimonial-feature__meta">Client Feedback</div>
             </Reveal>
 
             <div className="testimonial-grid">
-              <Reveal as="div" className="testimonial-card testimonial-card--elevated h-100" delay={160}>
+              <Reveal
+                as="div"
+                className="testimonial-card testimonial-card--elevated h-100"
+                delay={160}
+              >
                 <p>They helped us fix our hiring process in weeks.</p>
                 <span>Startup Founder</span>
               </Reveal>
-              <Reveal as="div" className="testimonial-card testimonial-card--elevated h-100" delay={220}>
+
+              <Reveal
+                as="div"
+                className="testimonial-card testimonial-card--elevated h-100"
+                delay={220}
+              >
                 <p>A strong blend of HR depth and business understanding.</p>
                 <span>Organization Lead</span>
               </Reveal>
-              <Reveal as="div" className="testimonial-card testimonial-card--elevated h-100" delay={280}>
+
+              <Reveal
+                as="div"
+                className="testimonial-card testimonial-card--elevated h-100"
+                delay={280}
+              >
                 <p>Clear, supportive, and easy to work with.</p>
                 <span>Program Partner</span>
               </Reveal>
@@ -214,28 +283,42 @@ function ServicesPage() {
           <div className="process-head mb-4">
             <div>
               <p className="process-head__eyebrow">How We Work</p>
-              <h2 className="process-head__title">Simple process. Clear outcomes.</h2>
-              <p className="process-head__lead">We keep the journey straightforward so you always know what happens next.</p>
+              <h2 className="process-head__title">
+                Simple process. Clear outcomes.
+              </h2>
+              <p className="process-head__lead">
+                We keep the journey straightforward so you always know what happens next.
+              </p>
             </div>
+
             <div className="process-head__line" aria-hidden="true">
               <span></span>
             </div>
           </div>
+
           <div className="process-flow">
             <Reveal as="div" className="process-card h-100" delay={100}>
               <div className="process-card__number">01</div>
               <h3>Discovery</h3>
-              <p className="mb-0">We understand your goals, constraints, and priority problems.</p>
+              <p className="mb-0">
+                We understand your goals, constraints, and priority problems.
+              </p>
             </Reveal>
+
             <Reveal as="div" className="process-card h-100" delay={180}>
               <div className="process-card__number">02</div>
               <h3>Planning</h3>
-              <p className="mb-0">We define scope, timeline, deliverables, and success criteria.</p>
+              <p className="mb-0">
+                We define scope, timeline, deliverables, and success criteria.
+              </p>
             </Reveal>
+
             <Reveal as="div" className="process-card h-100" delay={260}>
               <div className="process-card__number">03</div>
               <h3>Delivery</h3>
-              <p className="mb-0">We execute with support, check-ins, and practical recommendations.</p>
+              <p className="mb-0">
+                We execute with support, check-ins, and practical recommendations.
+              </p>
             </Reveal>
           </div>
         </div>
