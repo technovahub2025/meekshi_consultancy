@@ -24,14 +24,15 @@ function SiteLayout() {
   }
 
   const logoStyle = {
-    height: '40px',
-    width: '40px',
+    height: '90px',
+    width: '90px',
     objectFit: 'cover',
     borderRadius: '50%',
   }
 
   return (
     <>
+      {/* WhatsApp Button */}
       <a
         className="whatsapp-float"
         href="https://wa.me/918940135489"
@@ -41,6 +42,7 @@ function SiteLayout() {
         WhatsApp
       </a>
 
+      {/* HEADER */}
       <header className="site-header sticky-top">
         <nav className="navbar navbar-expand-lg py-3">
           <div className="container">
@@ -49,18 +51,15 @@ function SiteLayout() {
               to="/"
             >
               <img src={logo} alt="Meekshi Logo" style={logoStyle} />
-              Meekshi Consultancy
+              MEENAKSHI CONSULTANCY
             </NavLink>
 
             <button
               className={`navbar-toggler ${isNavOpen ? 'is-open' : ''}`}
               type="button"
-              aria-controls="mainNav"
-              aria-expanded={isNavOpen}
-              aria-label="Toggle navigation"
               onClick={() => setIsNavOpen((prev) => !prev)}
             >
-              <span className="navbar-toggler-icon-custom" aria-hidden="true">
+              <span className="navbar-toggler-icon-custom">
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -69,7 +68,6 @@ function SiteLayout() {
 
             <div
               className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}
-              id="mainNav"
             >
               <ul className="navbar-nav ms-auto gap-lg-2">
                 {navLinks.map((link) => (
@@ -94,31 +92,68 @@ function SiteLayout() {
 
       <Outlet />
 
+      {/* FOOTER */}
       <footer className="site-footer py-5 mt-5">
         <div className="container">
           <div className="row g-4">
+
+            {/* LEFT SIDE */}
             <div className="col-md-7">
               <div className="d-flex align-items-center gap-2">
                 <img src={logo} alt="Meekshi Logo" style={logoStyle} />
-                <h3 className="footer-title mb-0">Meekshi Consultancy</h3>
+
+                <div>
+                  <h3 className="footer-title mb-0 fw-bold">
+                    MEENAKSHI CONSULTANCY
+                  </h3>
+                  <small className="tagline">
+                    Where People, Process & Purpose Meet
+                  </small>
+                </div>
               </div>
-
-              <p className="mb-0 mt-2">
-                Where People, Process & Purpose Meet.
-              </p>
             </div>
 
+            {/* RIGHT SIDE - CONTACT CARDS */}
             <div className="col-md-5">
-              <p className="mb-1">
-                <strong>Location:</strong> Pondicherry
-              </p>
-              <p className="mb-1">
-                <strong>Email:</strong> meenakshiconsultancy@gmail.com
-              </p>
-              <p className="mb-0">
-                <strong>Phone:</strong> +91 8940135489
-              </p>
+              <div className="row g-3">
+
+                {/* Location */}
+                <div className="col-12">
+                  <div className="contact-card">
+                    <h6>Location</h6>
+                    <p className="mb-0">Pondicherry</p>
+                  </div>
+                </div>
+
+                {/* Email - Gmail Web */}
+                <div className="col-12">
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=meenakshiconsultancy@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="contact-card text-decoration-none"
+                  >
+                    <h6>Email</h6>
+                    <p className="mb-0">
+                      meenakshiconsultancy@gmail.com
+                    </p>
+                  </a>
+                </div>
+
+                {/* Phone */}
+                <div className="col-12">
+                  <a
+                    href="tel:+918940135489"
+                    className="contact-card text-decoration-none"
+                  >
+                    <h6>Phone</h6>
+                    <p className="mb-0">+91 8940135489</p>
+                  </a>
+                </div>
+
+              </div>
             </div>
+
           </div>
         </div>
       </footer>

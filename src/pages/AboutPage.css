@@ -324,3 +324,28 @@
     font-size: 0.88rem;
   }
 }
+
+.contact-card {
+  display: block;
+  background: #ffffff;
+  padding: 15px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid #ffc107;
+  transition: transform 0.2s ease;
+  color: inherit;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #777;
+}
