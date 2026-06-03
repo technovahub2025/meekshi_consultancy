@@ -2068,16 +2068,56 @@ h3 {
   bottom: 18px;
   right: 18px;
   z-index: 2000;
+
+  /* Perfect circle */
+  width: clamp(56px, 5vw, 64px);
+  height: clamp(56px, 5vw, 64px);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #22c55e;
-  color: #fff;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
+
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
   animation: pulseGlow 2.3s ease-in-out infinite;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
+.whatsapp-float i{
+  width:56%;
+  height:56%;
+  fill:currentColor;
+}
+.whatsapp-float svg {
+  width: 56%;
+  height: 56%;
+  fill: currentColor;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+  }
+}
 .form-control,
 .form-select {
   border-radius: 0.8rem;

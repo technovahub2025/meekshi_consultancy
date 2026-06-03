@@ -40,7 +40,7 @@ function SiteLayout() {
         target="_blank"
         rel="noreferrer"
       >
-        WhatsApp
+        <i class="fa-brands fa-whatsapp" style={{fontSize:'30px'}}></i>
       </a>
 
       {/* HEADER */}
@@ -126,7 +126,7 @@ function SiteLayout() {
                     </div>
                     <div className="contact-text">
                       <h6>Location</h6>
-                      <p className="mb-0">Pondicherry</p>
+                      <p className="mb-0" style={{ fontWeight: '600' }}>Pondicherry</p>
                     </div>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ function SiteLayout() {
                     </div>
                     <div className="contact-text">
                       <h6>Email</h6>
-                      <p className="mb-0">
+                      <p className="mb-0" style={{ fontWeight: '600' }}>
                         meenakshiconsultancy@gmail.com
                       </p>
                     </div>
@@ -162,7 +162,7 @@ function SiteLayout() {
                     </div>
                     <div className="contact-text">
                       <h6>Phone</h6>
-                      <p className="mb-0">+91 8940135489</p>
+                      <p className="mb-0" style={{ fontWeight: '600' }}>+91 8940135489</p>
                     </div>
                   </div>
                 </a>
