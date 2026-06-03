@@ -7,7 +7,7 @@ import './theme.css'
 import App from './App.jsx'
 import siteIcon from './assets/meenakshi consultancy.jpeg'
 
-document.title = 'meekshi'
+document.title = 'Meekshi Consultancy'
 
 const existingIcon = document.querySelector('link[rel="icon"]')
 if (existingIcon) {
