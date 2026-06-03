@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import logo from '../assets/meenakshi consultancy.jpeg'
 
 const navLinks = [
@@ -120,8 +121,13 @@ function SiteLayout() {
                 {/* Location */}
                 <div className="col-12">
                   <div className="contact-card">
-                    <h6>Location</h6>
-                    <p className="mb-0">Pondicherry</p>
+                    <div className="contact-icon-wrapper">
+                      <i className="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div>
+                      <h6>Location</h6>
+                      <p className="mb-0">Pondicherry</p>
+                    </div>
                   </div>
                 </div>
 
@@ -133,10 +139,15 @@ function SiteLayout() {
                     rel="noreferrer"
                     className="contact-card text-decoration-none"
                   >
-                    <h6>Email</h6>
-                    <p className="mb-0">
-                      meenakshiconsultancy@gmail.com
-                    </p>
+                    <div className="contact-icon-wrapper">
+                      <i className="bi bi-envelope-fill"></i>
+                    </div>
+                    <div>
+                      <h6>Email</h6>
+                      <p className="mb-0">
+                        meenakshiconsultancy@gmail.com
+                      </p>
+                    </div>
                   </a>
                 </div>
 
@@ -146,8 +157,13 @@ function SiteLayout() {
                     href="tel:+918940135489"
                     className="contact-card text-decoration-none"
                   >
-                    <h6>Phone</h6>
-                    <p className="mb-0">+91 8940135489</p>
+                    <div className="contact-icon-wrapper">
+                      <i className="bi bi-telephone-fill"></i>
+                    </div>
+                    <div>
+                      <h6>Phone</h6>
+                      <p className="mb-0">+91 8940135489</p>
+                    </div>
                   </a>
                 </div>
 
