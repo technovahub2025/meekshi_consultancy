@@ -116,15 +116,15 @@ function SiteLayout() {
 
             {/* RIGHT SIDE - CONTACT CARDS */}
             <div className="col-md-5">
-              <div className="row g-3">
+              <div className="d-flex flex-column gap-3">
 
                 {/* Location */}
-                <div className="col-12">
-                  <div className="contact-card">
+                <div className="footer-contact-card">
+                  <div className="footer-contact-item">
                     <div className="contact-icon-wrapper">
                       <i className="bi bi-geo-alt-fill"></i>
                     </div>
-                    <div>
+                    <div className="contact-text">
                       <h6>Location</h6>
                       <p className="mb-0">Pondicherry</p>
                     </div>
@@ -132,40 +132,40 @@ function SiteLayout() {
                 </div>
 
                 {/* Email - Gmail Web */}
-                <div className="col-12">
-                  <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=meenakshiconsultancy@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-card text-decoration-none"
-                  >
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=meenakshiconsultancy@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-contact-card text-decoration-none"
+                >
+                  <div className="footer-contact-item">
                     <div className="contact-icon-wrapper">
                       <i className="bi bi-envelope-fill"></i>
                     </div>
-                    <div>
+                    <div className="contact-text">
                       <h6>Email</h6>
                       <p className="mb-0">
                         meenakshiconsultancy@gmail.com
                       </p>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
 
                 {/* Phone */}
-                <div className="col-12">
-                  <a
-                    href="tel:+918940135489"
-                    className="contact-card text-decoration-none"
-                  >
+                <a
+                  href="tel:+918940135489"
+                  className="footer-contact-card text-decoration-none"
+                >
+                  <div className="footer-contact-item">
                     <div className="contact-icon-wrapper">
                       <i className="bi bi-telephone-fill"></i>
                     </div>
-                    <div>
+                    <div className="contact-text">
                       <h6>Phone</h6>
                       <p className="mb-0">+91 8940135489</p>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
 
               </div>
             </div>
