@@ -51,7 +51,7 @@ function SiteLayout() {
               to="/"
             >
               <img src={logo} alt="Meekshi Logo" style={logoStyle} />
-              MEENAKSHI CONSULTANCY
+              MEEKSHI CONSULTANCY
             </NavLink>
 
             <button
@@ -104,7 +104,7 @@ function SiteLayout() {
 
                 <div>
                   <h3 className="footer-title mb-0 fw-bold">
-                    MEENAKSHI CONSULTANCY
+                    MEEKSHI CONSULTANCY
                   </h3>
                   <small className="tagline">
                     Where People, Process & Purpose Meet
